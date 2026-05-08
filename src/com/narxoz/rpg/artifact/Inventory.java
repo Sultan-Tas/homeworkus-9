@@ -25,6 +25,17 @@ public class Inventory {
         }
     }
 
+    public void deleteArtifact(Artifact artifact) {
+        if (artifact != null) {
+            artifacts.remove(artifact);
+        }
+    }
+    public void deleteLastArtifact() {
+        if (!artifacts.isEmpty()){
+            artifacts.removeLast();
+        }
+    }
+
     public List<Artifact> getArtifacts() {
         return Collections.unmodifiableList(artifacts);
     }
