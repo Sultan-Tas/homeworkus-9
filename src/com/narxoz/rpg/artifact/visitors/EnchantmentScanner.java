@@ -3,6 +3,9 @@ package com.narxoz.rpg.artifact.visitors;
 import com.narxoz.rpg.artifact.*;
 
 public class EnchantmentScanner implements ArtifactVisitor {
+    public String getName(){
+        return "Enchantment Scanner";
+    }
     @Override
     public void visit(Weapon weapon) {
         System.out.printf("► This [%s] magically enhances your attack by [%d] dmg %n", weapon.getName(), weapon.getAttackBonus());

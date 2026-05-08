@@ -3,6 +3,9 @@ package com.narxoz.rpg.artifact.visitors;
 import com.narxoz.rpg.artifact.*;
 
 public class CurseDetector implements ArtifactVisitor {
+    public String getName(){
+        return "Curse Detector";
+    }
     @Override
     public void visit(Weapon weapon) {
         if (weapon.getName().toLowerCase().contains("cursed")){

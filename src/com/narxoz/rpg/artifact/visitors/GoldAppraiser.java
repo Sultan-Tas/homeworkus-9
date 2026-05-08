@@ -3,6 +3,9 @@ package com.narxoz.rpg.artifact.visitors;
 import com.narxoz.rpg.artifact.*;
 
 public class GoldAppraiser implements ArtifactVisitor {
+    public String getName(){
+        return "Gold Appraiser";
+    }
     @Override
     public void visit(Weapon weapon) {
         System.out.printf("☼ The weapon [%s] is worth %d gold%n", weapon.getName(), weapon.getValue());

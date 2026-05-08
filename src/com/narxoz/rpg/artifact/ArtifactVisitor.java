@@ -7,7 +7,10 @@ package com.narxoz.rpg.artifact;
  * without instanceof chains.
  */
 public interface ArtifactVisitor {
-
+    /**
+     * returns a name of the visitor.
+     */
+    String getName();
     /**
      * Visits a weapon artifact.
      *
