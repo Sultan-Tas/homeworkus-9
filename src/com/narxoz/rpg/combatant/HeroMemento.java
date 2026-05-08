@@ -11,35 +11,19 @@ import java.util.List;
  */
 public final class HeroMemento {
 
-    private final String name;
     private final int hp;
     private final int mana;
     private final int gold;
-    private final int maxHp;
-    private final int attackPower;
-    private final int defense;
     private final List<Artifact> inventorySnapshot;
 
-    HeroMemento(String name,
-                int hp,
+    HeroMemento(int hp,
                 int mana,
                 int gold,
-                int maxHp,
-                int attackPower,
-                int defense,
                 List<Artifact> inventorySnapshot) {
-        this.name = name;
         this.hp = hp;
         this.mana = mana;
         this.gold = gold;
-        this.maxHp = maxHp;
-        this.attackPower = attackPower;
-        this.defense = defense;
         this.inventorySnapshot = inventorySnapshot == null ? List.of() : List.copyOf(inventorySnapshot);
-    }
-
-    String getName() {
-        return name;
     }
 
     int getHp() {
@@ -52,18 +36,6 @@ public final class HeroMemento {
 
     int getGold() {
         return gold;
-    }
-
-    int getMaxHp() {
-        return maxHp;
-    }
-
-    int getAttackPower() {
-        return attackPower;
-    }
-
-    int getDefense() {
-        return defense;
     }
 
     List<Artifact> getInventorySnapshot() {
